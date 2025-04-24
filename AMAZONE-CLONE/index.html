@@ -34,6 +34,24 @@
           <i class="fa-solid fa-magnifying-glass"></i>
         </div>
       </div>
+    <!-- Add this language selector div here -->
+    <div class="nav-language border">
+      <div class="language-selector">
+        <i class="fa-solid fa-globe"></i>
+        <span id="current-language">EN</span>
+        <i class="fa-solid fa-caret-down"></i>
+      </div>
+      <div class="language-dropdown">
+        <ul>
+          <li><a href="#" class="language-option" data-lang="EN">English</a></li>
+          <li><a href="#" class="language-option" data-lang="HI">हिन्दी (Hindi)</a></li>
+          <li><a href="#" class="language-option" data-lang="ES">Español (Spanish)</a></li>
+          <li><a href="#" class="language-option" data-lang="FR">Français (French)</a></li>
+          <li><a href="#" class="language-option" data-lang="中文">中文 (Chinese)</a></li>
+        </ul>
+      </div>
+    </div>
+    <!-- End of language selector -->
       <div class="nav-signin border">
         <p><span>Hello, sign in</span></p>
         <p class="nav-second">Account & Lists</p>
@@ -196,7 +214,7 @@
 <div class="recommendation-box">
   <h2>See personalized recommendations</h2>
   <button class="sign-in-btn" onclick="openModal()">Sign in</button>
-  <p>New customer? <a href="#">Start here.</a></p>
+  <p>New customer? <a href="#" onclick="openNewCustomerModal()">Start here.</a></p>
 </div>
 
 <div id="signInModal" class="modal">
@@ -255,5 +273,21 @@
       </div>
     </div>
   </footer>
+
+  <div id="newCustomerModal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn" onclick="closeNewCustomerModal()">&times;</span>
+      <h2>Create Account</h2>
+      <form id="newCustomerForm">
+        <input type="text" placeholder="Your name" required>
+        <input type="email" placeholder="Email" required>
+        <input type="password" placeholder="Password" required>
+        <input type="password" placeholder="Re-enter password" required>
+        <button type="submit">Create your Amazon account</button>
+      </form>
+      <p class="terms">By creating an account, you agree to Amazon's <a href="#">Conditions of Use</a> and <a href="#">Privacy Notice</a>.</p>
+    </div>
+  </div>
+  </body>
 </body>
 </html>
